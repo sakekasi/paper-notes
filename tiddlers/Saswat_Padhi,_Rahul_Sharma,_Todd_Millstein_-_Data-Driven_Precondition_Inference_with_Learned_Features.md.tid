@@ -1,12 +1,16 @@
 created: 20160909160930972
-modified: 20160914161219643
+modified: 20160914221702527
 tags: paper [[related work]] PIE
 title: Saswat Padhi, Rahul Sharma, Todd Millstein - Data-Driven Precondition Inference with Learned Features
 type: text/x-markdown
 
+## [PAPER](https://www.mendeley.com/viewer/?fileId=6e764eff-2668-6515-55a7-4365ff4d8920&documentId=5e86872b-5c20-3344-a65b-d9e8c6976164)
+
 * code + postcondition -> precondition
 * true ex's + false ex's -> precondition
 * have user give additional operations to grammar
+
+## [Figures](#Figures; PIE)
 
 ## Questions
 * how will having preconditions benefit the user?
@@ -14,3 +18,4 @@ type: text/x-markdown
 
 ## References
 * [M. J. Kearns and U. V. Vazirani - *An Introduction to Computational Learning Theory*](https://mitpress.mit.edu/books/introduction-computational-learning-theory)
+* A.  Albarghouthi,  S.  Gulwani,  and  Z.  Kincaid. - *Recursive program  synthesis. In Computer Aided Verification*
