@@ -1,6 +1,10 @@
 created: 20160909212936689
-modified: 20160914160915770
+modified: 20160914221209752
 title: Stylesheets
 type: text/x-markdown
 
-* [Monospace Styling](#Monospace Styling)
+* [Fonts](#Fonts)
+* [Monospace Styling](#Monospace Style)
+* [Title Styling](#Title Style)
+* [Body Styling](#Body Style)
+* [Tag Styling](#Tag Style)
