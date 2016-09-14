@@ -1,0 +1,17 @@
+created: 20160912182143794
+modified: 20160914161219638
+tags: paper incremental
+title: Sean McDirmid - Glitch: A Live Programming Model
+type: text/x-markdown
+
+* change in code and input should be managed automatically, similarly to how garbage collection eliminates memory management as an explicit programmer concern
+* incremental execution, like incremental lexing and parsing depends on some constraints on traditional languages. But, sean argues that these are reasonable constraints that don't limit expressivity.
+* custom incremental lexing that conserves token identities through an edit, and then using these tokens and the call stack to form execution addresses
+  - [see Sean 09/11/2016](#Sean 09/11/2016)
+
+## REFERENCES
+* Sean McDirmid - *Living it up with a live programming language*
+* Sean McDirmid, W. C. Hsieh - *Superglue: Component programming with object-oriented signals*
+* Jonathan Edwards - *Time is of the essence*
+* G Ramalingam, T Reps - *A categorized bibliography on incremental computation*
+* Jonathan Edwards - *Coherent reaction*

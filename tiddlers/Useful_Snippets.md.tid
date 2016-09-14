@@ -1,0 +1,6 @@
+created: 20160911000646914
+modified: 20160914160915778
+title: Useful Snippets
+type: text/x-markdown
+
+* filter all open cards `[list[$:/StoryList]!prefix[$:]!title[GettingStarted]]`

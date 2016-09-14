@@ -1,0 +1,17 @@
+created: 20160912181000475
+modified: 20160914161219652
+tags: paper
+title: Hesam Samimi, Rebecca Hicks, Ari Fogel, Todd Millstein - Declarative Mocking
+type: text/x-markdown
+
+* developers write method specifications in a high level logical language fore the API being mocked, and a constraint solver dynamically executes these specifications when the methods are invoked.
+* allows data and aspects of the environment to be easily mocked
+  - specify predicates using `assume` followed by a predicate
+* allows for nondeterminism in testing
+  - `unique` allows the guarantee of different test cases that all fulfill the specified constraints
+* with specifications, the programmer can naturally start with a bare-bones mock whose specifications are very weak and then incrementally strengthen the specifications based on the requirements of the client code under test
+* specifications are just as error prone as mocks, and can be hard to debug
+  - a fix for this issue may be to do an example generation type thing and show examples that match the constraints
+
+## REFERENCES
+* Beck - *Test Driven Development: By Example*

@@ -1,0 +1,13 @@
+created: 20160909160830269
+modified: 20160914161219656
+tags: paper [[related work]]
+title: Daniel Windham - Mud: A Multidimensional Representation of Software
+type: text/vnd.tiddlywiki
+
+"It's harder to tell a literal from a looked-up value. The concrete channel has some downsides."
+
+Sometimes, I get the abstract concept, and obscuring it with a concrete value hurts instead of helping
+
+"It would be nice to nail home the idea that there's tactical value during the research process of enforcing a concrete-only constraint, because it makes us see how far we can push the concrete representation"
+
+"When you grow your codebase bottom-up, your function's subcalls autocomplete as you write them. When you grow your codebase top-down, the stubs you write in one function seed the next one"

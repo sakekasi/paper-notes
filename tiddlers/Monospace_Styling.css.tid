@@ -1,0 +1,13 @@
+created: 20160909212620138
+modified: 20160914160915766
+tags: $:/tags/Stylesheet
+title: Monospace Styling
+type: text/css
+
+.tc-edit-texteditor {
+  font-family: monospace;
+}
+
+code {
+  font-family: monospace !important;
+}

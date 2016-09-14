@@ -1,0 +1,16 @@
+created: 20160909160930972
+modified: 20160914161219643
+tags: paper [[related work]] PIE
+title: Saswat Padhi, Rahul Sharma, Todd Millstein - Data-Driven Precondition Inference with Learned Features
+type: text/x-markdown
+
+* code + postcondition -> precondition
+* true ex's + false ex's -> precondition
+* have user give additional operations to grammar
+
+## Questions
+* how will having preconditions benefit the user?
+* how could the environment use knowledge of preconditions to help the user develop an algorithm?
+
+## References
+* [M. J. Kearns and U. V. Vazirani - *An Introduction to Computational Learning Theory*](https://mitpress.mit.edu/books/introduction-computational-learning-theory)

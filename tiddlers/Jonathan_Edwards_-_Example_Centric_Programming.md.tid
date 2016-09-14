@@ -1,0 +1,18 @@
+created: 20160913051208112
+modified: 20160914161219646
+tags: paper MUD
+title: Jonathan Edwards - Example Centric Programming
+type: text/x-markdown
+
+## [PAPER](https://www.mendeley.com/viewer/?fileId=4277afbe-4b19-fe5f-6e84-96a7926e0902&documentId=1cf83d78-cecf-3379-8d5f-3465338eda90)
+
+* We are mentally running an interpreter when there is a computer sitting right in front of us!
+* The example view allows you to see multiple times at once - rather than the "peephole" of debugging-style interfaces, it presents the whole panorama of history
+* the goal here is to eliminate this mode-switch by unifying the debugger and editor into a single tool with a consistent UI
+* from a right-click menu, any value shown in the example view can be declared as an assertion. This means that the current value is frozen
+  - stubs the user typed serve this function in MUD, but it's hard to see what the result of execution is. They both take up the same place. 
+  - we need a way to show both result of execution and what you want. Furthermore, we want to be able to 'bless' execution results into test cases.
+* Instead, each example can be gotten to work once, and then frozen into an assertion
+* The opposite of an assertion is an override, which sets the value of some code expression to be the value of a different expression
+* conditionalization - program handles the syntactic trappings of a branching path, allowing the user to focus on the case
+  - MUD should keep track of test cases considered to be part of an incomplete condition

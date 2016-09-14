@@ -1,0 +1,50 @@
+created: 20160914161412725
+draft.of: John H. Maloney, Randall B. Smith - Directness and Liveness in the Morphic User Interface Construction Environment
+draft.title: John H. Maloney, Randall B. Smith - Directness and Liveness in the Morphic User Interface Construction Environment
+modified: 20160914163418941
+tags: paper Morphic [[user interface]]
+title: Draft of 'John H. Maloney, Randall B. Smith - Directness and Liveness in the Morphic User Interface Construction Environment'
+type: text/x-markdown
+
+## [PAPER](https://www.mendeley.com/viewer/?fileId=3471a077-5974-52f3-3666-c75fe9f40408&documentId=a40e6857-fe21-32cb-a503-8276e4f80f04)
+
+this paper has a *really* good abstract
+
+## Principles
+* Directness - a user interface designer can initiate the process of examining or changing the attrs, structure and behaviour of user interface components by pointing at their graphical representations directly
+* Liveness - the user interface is always reactive. Updates happen continuously
+
+## Techniques to support
+* structural reification (directness)
+  - complex morphs constructed by composition
+  - Structural reification is essential for directness. It allows every graphical object to be examined, manipulated, and disassembled by direct manipulation
+* layout reification (directness, liveness)
+  - transforms, layouts are reified as well
+  - site selection - limit scope of layout computation to smallest possible submorph tree
+    * search up submorph tree to find a morph whose external layout attrs (size, minimum size) are unlikely to change
+    * if layout properties change there after layout, search further up the tree and repeat
+* ubiquitous animation (liveness)
+  - Animation vs. autonomous behaviour
+    * autonomous behaviour - on tick, morph changes the way it looks
+    * animation - changes to external properties imposed externally from the morph
+  - damage list - if a morph is affected by animation, add it to a 'dirty list', which is processed each display cycle, dealing with intersecting bounding boxes 
+* live editing (directness, liveness)
+  - distinguish editing gestures form operating gestures
+    * reify object behind morph with an "outliner for morph"
+  - disambiguate spatial references
+  - identify operands of an operation
+  - manipulate submorphs in place
+    * explode and highlight stacked morphs in order to select?
+
+## IDEAS
+* the principles behind morphic are really great, but the particular implementations may not be so much.
+* some of the optimizations are interesting, but others may not
+  - Aran mentioned morphs that were hard to construct programmatically, because they had fancy processing of children to ease construction by the user. the two (user construction vs. programmatic construction) should be distinguished
+* I'd envision a system that is built on and interoperates with modern web tech (SVG?) that allows the user to construct objects, and allows for the inspection of objects via inspector and console.
+* Why was morphic JS implemented on canvas, and not in SVG?
+
+## REFERENCES
+* apple layout with cassowary
+* morphic js
+* lively 4 UI
+* Yoshiki's Mini Morphic
