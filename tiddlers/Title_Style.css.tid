@@ -1,11 +1,14 @@
 created: 20160914213833007
-modified: 20160914221209742
+modified: 20160915011757082
 tags: $:/tags/Stylesheet
 title: Title Style
 type: text/css
 
-.tc-tiddler-title, .tc-site-title {
+.tc-tiddler-title, .tc-site-title, h1, h2, h3, h4, h5 {
   font-family: "Work Sans", sans-serif;
+}
+
+.tc-tiddler-title, .tc-site-title {
   font-weight: 500 !important;
   font-kerning: normal;
   color: hsl(0, 0%, 0%) !important;
