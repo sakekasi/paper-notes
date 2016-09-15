@@ -1,8 +1,10 @@
 created: 20160912181000475
-modified: 20160914161219652
+modified: 20160914230219336
 tags: paper
 title: Hesam Samimi, Rebecca Hicks, Ari Fogel, Todd Millstein - Declarative Mocking
 type: text/x-markdown
+
+## [PAPER](https://www.mendeley.com/viewer/?fileId=20ea389f-5257-c477-3cfe-855840fc9434&documentId=e4cedd81-5533-354a-b643-e820add9a0b9)
 
 * developers write method specifications in a high level logical language fore the API being mocked, and a constraint solver dynamically executes these specifications when the methods are invoked.
 * allows data and aspects of the environment to be easily mocked
