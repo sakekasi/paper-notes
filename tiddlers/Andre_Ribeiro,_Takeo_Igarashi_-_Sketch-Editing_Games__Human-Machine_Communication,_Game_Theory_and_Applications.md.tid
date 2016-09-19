@@ -1,0 +1,26 @@
+created: 20160919164133207
+modified: 20160919170706430
+tags: paper
+title: Andre Ribeiro, Takeo Igarashi - Sketch-Editing Games: Human-Machine Communication, Game Theory and Applications
+type: text/x-markdown
+
+[PAPER](https://www.mendeley.com/viewer/?fileId=41b6fbab-5f09-e64d-00df-7dfcf2caad3c&documentId=75fd68da-a183-3e35-b97e-378a2a3fb826)
+
+* game-theoretical solution to human computer conversation
+  - conversation = individuals learning about a process in which others are learning
+  - states of a physical process (medium states)
+  - states of others (knowledge states)
+* each player modifies the current drawing to make it less ambiguous (is this what you mean?)
+  - people cope with joint problems by adopting hypotheses of what others are thinking and revising these hypotheses with interaction
+* semi-supervised/active machine learning
+  - machine can query the user
+  - small, but high quality data for learning (as opposed to big data)
+  - semi-supervised, online, efficient, visual, intuitive representations
+* model's uncertainty is clearly visualized by the user
+
+
+* this study is about allowing users to analyze, visualize, and modify learned models
+* how can we represent the user's knowledge without pre-encoding it in some way?
+  - the game is figuring out which game the other wants to play
+
+# [REFERENCES](#References; Andre Ribeiro, Takeo Igarashi - Sketch-Editing Games: Human-Machine Communication, Game Theory and Applications) 
