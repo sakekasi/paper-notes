@@ -1,0 +1,35 @@
+created: 20170113174521232
+modified: 20170113175853923
+tags: paper debugging
+title: Ducassé - Coca: An automated debugger for C
+type: text/x-markdown
+
+* coca - an automated debugger for c
+  - based on events related to language constructs
+  - trace: sequence of events
+  - query trace with prolog + primitives
+  - search on both control flow and data
+* what is considered 'state of the practice' in 2016? what are the most advanced debuggers that are used?
+* contributions
+  - breakpoint mechanism based on events related to language constructs
+  - fine grained set of events that model the sequential processing of C programs
+  - trace query mechanism where control flow and data can be both used in synergy to search through the execution traces
+  - trace querying mechanism that does not require any storage. analysis is synchronous with execution
+* Example: N Queens
+  - they make up a prolog predicate on the fly, in order to better visualize the board
+  - `fget(type=function and func=legal and port=exit and chrono=Chr), current_var(ok, val=1), display_board.`
+  - 'A forthcoming graphical user interface, with templates to fill in, will help users specify sophisticated queries.'
+* debugger composed of 3 modules:
+  1. extraction - build the trace
+  2. analysis - query and view the trace
+  3. visualization
+* coca is c-based so the queries are mostly on functions
+
+* References:
+  1. M. Ducassé. Abstract views of Prolog executions in Opium
+  2. M. Ducassé. Opium: An extendable trace analyser for Prolog
+  3. M. Golan and D. Hanson. DUEL- A very high-level debugging language
+  4. **C. LeDoux. A knowledge-based system for debugging concurrent software**
+  5. R. Lencevicius, U. Hölzle, and A. Singh. Query-based debugging of object-oriented programs
+  6. M. Powell and M. Linton. A database model of debugging
+  7. P. Winterbottom. Acid: a debugger built from a language.

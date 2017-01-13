@@ -1,0 +1,43 @@
+created: 20170112172949646
+modified: 20170112174533703
+tags: paper debugging
+title: Lencevicius, Hölzle, Singh - Dynamic Query-Based Debugging of Object-Oriented Programs
+type: text/x-markdown
+
+* use queries to continuously check inter-object relationships
+* here, they pause the debugger if any queries prove false
+* good for errors specific to particular instances, deep in data
+* conditional breakpoints are a decent baseline to compare to
+* queries
+  - should be pure (no incrs, side-effecting fns). wonder how hard this would be with our ownership model
+  - "the expression will be evaluated for each tuple in the Cartesian product of the query's individual domains, and the query result will include all tuples for which the expression evaluates to true"
+  - prevent query execution at points where the state is inconsistent (guarded queries)
+  - query includes change set (set of events that should trigger re-excecution e.g. write to this var or this class was constructed)
+  - queries are incrementally re-evaluated. find what changed, reevaluate query with deltas.
+* expressing invariants in the form of queries is interesting. might be a good strategy to debug as you write
+* ray tracing would be a good example to try out
+* sample queries:
+
+
+```
+FieldExpression fe; FieldDefinition fd.
+fe.id == fd.name && fe.type == fd.type && fe.field != fd
+```
+
+```
+Molecule* m. m.x < 0 || m.x > X_RANGE || m.y < 0 || m.y > Y_RANGE
+```
+
+```
+Molecule* m1 m2. m1.x == m2.x && m1.y == m2.y && m1 != m2
+```
+
+```
+IntersectPt ip. ipIntersection.z < 0
+```
+
+
+* References:
+  1. Eisenstadt, M. 1997. My hairiest bug war stories. Communications of the ACM, 40(4): 30–38.
+  2. Lencevicius, R. 2000a. Advanced Debugging Methods, Kluwer Academic Publishers.
+  3. Lencevicius, R., Holzle, U., and Singh, A.K. 1999. Dynamic query-based debugging. In ¨ Proceedings of the 13th European Conference on Object-Oriented Programming’99, (ECOOP’99), Lisbon, Portugal, Published as Lecture Notes on Computer Science 1628, Springer-Verlag.

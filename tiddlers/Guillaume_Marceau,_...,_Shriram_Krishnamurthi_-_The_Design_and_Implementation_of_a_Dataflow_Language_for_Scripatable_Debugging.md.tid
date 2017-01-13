@@ -1,0 +1,31 @@
+created: 20170110173140699
+modified: 20170110175207987
+tags: paper debugging
+title: Guillaume Marceau, ..., Shriram Krishnamurthi - The Design and Implementation of a Dataflow Language for Scripatable Debugging
+type: text/x-markdown
+
+* this paper presents a dataflow language for scripting debuggers, along with several motivating examples of its use. The authors use FRP to check for violations and build explanatory models of datastructures
+* dijkstra's algorithm + priority queue (nice motivating example. would be good for our stuff as a case study)
+  - use event-based programming to test the hypothesis that problem is in priority queue. Check that removes are decreasing monotonically
+  - also create a *redundant model of program execution*. In this case, a sorted list representation of the priority queue, just for debugging
+* desiderata
+  1. easy way to define commands (e.g."verify that this tree is balanced")
+  2. represent invariants about code outside of source
+  3. generate hypotheses while running a program (don't throw away the entire debugging context)
+  4. scripting language must be designed to act as a recipient for events. Since we're interacting with code events
+  5. debuggers should have convenient access to rich I/O (he fell into console trap here, but the flame graph could be thought of as pertaining to this)
+* misc thoughts
+  - tracepoints are useful. It's good to be able to access data from 'inside' the program
+  - breakpoints are kinda cool, but I think that our notion of a timeline where you see everything and can just jump to a point to see it in more detail is much more direct
+  - *models* are a powerful tool for explanation. (e.g. priorityqueue as sorted list, red-black tree as set). Could we use them to test our code, and distribute them with libs?
+  - I really liked the reveal that cormen's dijkstra algo was wrong at that point, as it later amends the pseudocode to prevent the breakage of an invariant
+  - instead of expressing contracts at debug time, why not write them beforehand and do an IOP-style understand as you go? What are the usability barriers to this?
+  - I really like the dataflow/stream of events style. could be a cool way to do queries in our stuff. Prolog + dataflow might be something worth experimenting with.
+  - he still doesn't answer the question 'how do we do this as we write?'
+  - another issue I have with this work is that it doesn't do enough to show the programmer context. The visualizations are great, but how do they relate to each other? that's still implicit
+  - 'temporal contracts on programs' sounds interesting
+* references
+  1. Marcio de Sousa Dias and Debra J. Richardson. Issues on software monitoring. Technical report, ICS, 2002.
+  2. Mireille Ducassé. Coca: an automated debugger for C. In *Proceedings of the 21st International Conference on Software Engineering*, pages 504-513, 1999.
+  3. Raimondas Lencevivius. On-the-fly query-based debugging with examples. In *Proceedings of the Fourth International Workshop on Automated Debugging*, 2000.
+  4. Raimondas Lenecevicius, Urs Hölzle, and Ambuj K. Sing. Dynamic query-based debugging of object-oriented programs. *Automated Software Engineering*, 10(1):39-74, 2003.
