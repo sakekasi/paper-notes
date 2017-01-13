@@ -1,0 +1,8 @@
+created: 20170113180400281
+modified: 20170113180504830
+title: Interesting Examples
+type: text/x-markdown
+
+* N-Queens
+* dijkstra's algorithm + priority queue
+* ray tracing
