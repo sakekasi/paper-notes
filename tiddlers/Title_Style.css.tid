@@ -1,5 +1,5 @@
 created: 20160914213833007
-modified: 20160915011757082
+modified: 20170117190331795
 tags: $:/tags/Stylesheet
 title: Title Style
 type: text/css
@@ -9,13 +9,13 @@ type: text/css
 }
 
 .tc-tiddler-title, .tc-site-title {
-  font-weight: 500 !important;
-  font-kerning: normal;
+  font-weight: 600 !important;
+  font-kerning: auto;
   color: hsl(0, 0%, 0%) !important;
 }
 
 .tc-tiddler-title h2 {
-  font-weight: 500 !important;
-  font-kerning: normal;
+  font-weight: 600 !important;
+  font-kerning: auto;
   color: hsl(0, 0%, 0%) !important;
 }
