@@ -1,0 +1,45 @@
+created: 20170124174304008
+modified: 20170124180309568
+tags: paper [[program visualization]]
+title: Johannes Bohnet, Martin Koeleman, Juergen Doellner - Visualizing Massively Pruned Execution Traces to Facilitate Trace Exploration
+type: text/x-markdown
+
+* this paper presents an algo for pruning and removing repetition in program traces w/ large amounts of fn calls
+* the result is a small, gistable visualization that does a good job of capturing the interesting bits of that trace.
+* related work
+  - macroscopic : present trace data in a cumulative, overview-like way
+  - microscopic : depict sequences of function calls explicitly
+* pruning execution traces
+  - function calls are classified as:
+    1. delegating : exactly one significant subcall
+    2. coordinating : trigger 2+ significant subcalls
+    3. worker : calls that are significant themselves
+    4. less significant : no or few subcalls, low execution cost
+  - classify functions using thresholds
+    * `T_nsub` : threshold for # subcalls
+    * `T_time` : threshold value for significant consumed time
+    * coordinating if `n_dirsubsig >= 2`
+    * worker if `n_dirsubsig = 0 && (n_sub >= T_nsub) || (time >= T_time)`
+* detecting repetitive behaviour
+  - comparing 2 function calls (trees)
+  - fingerprint : bit vector with as many dimensions as functions participating
+    1. abstracts repeated function executions
+    2. abstracts order of function executions
+  - similarity : `(numDistinctActiveFuncs(a, b)) / (2 * max(numFuncs(a), numFuncs(b)))`
+  - `T_sim` threshold. anything below it is hidden
+* trying it out on a case study reduced size by orders of magnitude
+
+---
+
+* I really like the idea of a 'fingerprint' that you can see from a high level.
+* summarizing repetition also sounds like a good idea
+* Instead of using high level heuristics, though, it'd be good to incorporate notions of semantics/'what the user is looking for'
+
+###References
+1. J. Bohnet, S. Voigt, and . Döllner. Locating and Understanding Features of Complex SSoftwareSystems by Synchronizing Time-, Collaboration- and Code-Focused Views on Execution Traces.
+2. B. Cornelissen, D. Holten, A. Zaidman, L. Moonen, J. J. van Wijk, A. van Deursen. Understanding Execution Traces Using Massive Sequence and Circular Bundle Views.
+3. D. F. Jerding, J. T. Stasko, and T. Ball. Visualizing interactions in program executions
+4. D. B. Lange and Y. Nakamura. Object-Oriented Program Tracing and Visualization.
+5. W. De Puaw, D. Lorenz, J. Vlissides, and M. Wegman. Execution patterns in object-oriented visualization.
+6. S. P. Reiss. JOVE: Java as it happens.
+7. T. Systä. Understanding the Behavior of Java Programs.

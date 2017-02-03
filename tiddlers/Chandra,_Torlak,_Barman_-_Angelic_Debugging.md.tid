@@ -1,0 +1,37 @@
+created: 20170203175205198
+modified: 20170203180950490
+tags: paper debugging
+title: Chandra, Torlak, Barman - Angelic Debugging
+type: text/x-markdown
+
+* to be fair, I didn't read very much of this paper. But, the introduction was extremely interesting and thought provoking. The rest was formalising and implementing the thing, which I can read more into if I want to implement this.
+* Intro
+  - They locate expressions that are the likely causes of failing tests
+  - swap value `v` for `v'`. 
+  - If this makes a failing test pass, then it's a candidate to be explored (come up with some `e'` that produces `v'`).
+  - They also identify expressions that are *flexible* (can be changed without making passing tests fail).
+    * "if `e` evaluates to `w` in a passing test, but the same test continues to pass if `w` is replaced with `w' != w`, then we have a level of confidence that `e` can be replaced by a syntactically different expression `e'`.
+  - so what we get are new values for flexible expressions, which fix the failing test, but don't break passing ones.
+* they have the advantage of a very clear goal to focus their algo. It's broken. This particular test is failing.
+  - what about exploratory debugging? How do I identify salient portions of my program as I'm writing it?
+  - one interesting heuristic is values where a small change makes big changes in the result.
+  - perhaps big changes to control flow from small changes to value?
+* contracts are a useful way to give the program a 'goal' to work towards. But, it's a pain to write contracts as you go
+  - how can we lower the effort to make contracts?
+  - show the user snippets that the could use, based on our notions of interesting pieces of the program?
+  - but you need to suggest snippets from incomplete code, maybe even nothing.
+* I'm not actually used to the 'fuzzy' style of thinking that the computer helping me would bring about
+  - I like to hold an idea in my head until I feel like I have a pretty complete understanding of it. Then, I put it down.
+  - but, it'd be interesting to lean on the computer to do more of my thinking.
+
+> "In summary, if replacing an expression `e` with a value `v` different than `e` fixes the failing test, then repairing `e` with a value `v` different than `e` computes does not break a passing test, then we have some freedom to change `e`; we say that it is *flexible* and a good repair candidate."
+
+1. The programmer, using intuition, observation of runtime logs, or feedback from fault-localization tools, indicates a scope that might contain the bug
+2. The computer tries to validate the hypothesis, examining all exprs in the scope to find plausible repair candidates
+3. The computer factors in info from passing tests to eliminate inflexible repair candidates
+4. The programmer attempts to find `e'` s.t. it produces `v'` for one of the candidates
+
+> The big idea here is something intervention-y. try out a bunch of interventions that might make the program work, and have the programmer fill them in.
+
+##References
+1. J. A. Jones, M. J. Harrold, and J. Stasko. Visualization of test information to assist fault localization.
