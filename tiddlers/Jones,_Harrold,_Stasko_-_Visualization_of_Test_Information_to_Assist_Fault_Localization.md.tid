@@ -1,0 +1,25 @@
+created: 20170207173252435
+modified: 20170207174123681
+tags: paper debugging [[program visualization]]
+title: Jones, Harrold, Stasko - Visualization of Test Information to Assist Fault Localization
+type: text/x-markdown
+
+* these guys generalize the 'color lines red and green to show coverage' idea into a useful viz
+* once again, this has a very clear goal. Assess lines of code using tests. The question in my ind is "what are the heuristics for debug-as-you-write?"
+* devs consistently perform 4 tasks when debugging
+  1. identify statements involved in failures
+  2. select suspicious statements involved in failures
+  3. hypothesize about suspicious faults
+  4. restore program variables to a specific state
+* these guys map each line to a color, based on how it performs in tests
+  - hue of the color ranges from green to red (through yellow), and indicates percentage of tests that passed for this line
+  - brightness of color indicates coverage (brighter = covered by more tests)
+* this is super pretty! But I think it's still hard to think about the code from this representation. The red bits seem problematic, but that's all I get here. Where did these happen? when? are they related?
+* rest of the paper is an evaluation of the viz
+
+## References
+1. xSlice: A tool for program debugging
+2. H. Agrawal, J. Horgan, S. London, W. Wong. Fault localization using execution slices and dataflow tests
+3. J. Eagan, M. J. Harrold, J. Jones, J. Stasko. Technical note; visually encoding program test information to find faults in software
+4. Jones, Harrold, Stasko. Visualization for fault localization.
+5. H. Pan, R. A. DeMillo, E. H. Spafford. Failure and fault analysis for software debugging.

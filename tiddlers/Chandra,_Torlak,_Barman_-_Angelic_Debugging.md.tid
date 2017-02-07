@@ -1,5 +1,5 @@
 created: 20170203175205198
-modified: 20170203180950490
+modified: 20170204205635329
 tags: paper debugging
 title: Chandra, Torlak, Barman - Angelic Debugging
 type: text/x-markdown
@@ -24,7 +24,7 @@ type: text/x-markdown
   - I like to hold an idea in my head until I feel like I have a pretty complete understanding of it. Then, I put it down.
   - but, it'd be interesting to lean on the computer to do more of my thinking.
 
-> "In summary, if replacing an expression `e` with a value `v` different than `e` fixes the failing test, then repairing `e` with a value `v` different than `e` computes does not break a passing test, then we have some freedom to change `e`; we say that it is *flexible* and a good repair candidate."
+> In summary, if replacing an expression `e` with a value `v` different than `e` fixes the failing test, then repairing `e` with a value `v` different than `e` computes does not break a passing test, then we have some freedom to change `e`; we say that it is *flexible* and a good repair candidate.
 
 1. The programmer, using intuition, observation of runtime logs, or feedback from fault-localization tools, indicates a scope that might contain the bug
 2. The computer tries to validate the hypothesis, examining all exprs in the scope to find plausible repair candidates

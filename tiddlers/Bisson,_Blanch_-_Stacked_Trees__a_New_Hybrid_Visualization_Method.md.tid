@@ -1,0 +1,19 @@
+created: 20170207174131795
+modified: 20170207175012194
+tags: paper visualization
+title: Bisson, Blanch - Stacked Trees: a New Hybrid Visualization Method
+type: text/x-markdown
+
+* this paper introduces a focus+context visualization called stacked trees.
+* They are a tool for seeing details of clusters of info, and the hierarchy that relates them
+* basically, they're trees where some subtrees' leaves are grouped into a stack, rather than a tree
+* they're useful for understanding local information in a larger global context.
+* the viz kinda speaks for itself
+
+## References
+1. Berkhin P. 2006. Survey of clustering data mining techniques
+2. Bertini E. 2011. Quality Metrics in High-Dimensional Dat Visualization: An Overview and Systematization
+3. Furnas G. W. 2006. A fisheye follow-up: further reflections on focus + context.
+4. Landesberger (von) T., Kuijper, A. Schreck T., Kohlhammer J. , van Wijk, JJ. Fekete, J-D and Fellner DW. 2011. Visual Analysis of Large Graphs: State-of-the-Art and Future Research Challenges.
+
+![stacked tree](stacked-tree.png "stacked tree")
