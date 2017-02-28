@@ -1,0 +1,25 @@
+created: 20170228214108310
+modified: 20170228215019035
+tags: paper [[user interface]] 3D croquet
+title: Smith, Raab, Ohshima, Reed, Kay - Filters and Tasks in Croquet
+type: text/x-markdown
+
+* this paper talks about the use of filters to implement a "semi-moded" interaction interface in croquet
+* they use "magic lenses" with asymmetries to allow for multiple views on the same world.
+* really applicable, even in a 2.5d environment. An interesting approach for a live editor may be to have 'query layer', 'visualization layer', etc. Or even lens areas on a starcraft-style infinite screen.
+
+
+* I completely buy into modelessness. Even if there's a small indicator of mode, keeping track of it gets in the way. Directness is important, and modes are not the way reality works.
+* Lenses allow for a "semi-modeless" experience. The lens serves as a "reified mode" that makes it clear how you're looking at the world.
+* Asymmetrical systems are really useful. example here is the wicket editor, which lets you edit objects that are only visible through your particular magic lens. Everyone can see them once you're done, but not while you're editing.
+
+![Figure 7](Smith, Raab, Ohshima, Reed, Kay - Figure 7)
+
+
+##References
+
+1. Bier, E.A.,  M. Stone, K. Pier, W. Buxton, T. DeRose. Toolglass and Magic Lenses: The See-Through Interface.
+2. Engelbart, Douglas, 1968 NLS Demonstration Video
+3. Kay, Alan. "The Early History of Smalltalk"
+4. Sutherland, I. "The Ultimate Display"
+
