@@ -1,0 +1,8 @@
+created: 20170315162139454
+modified: 20170315162340489
+tags: book [[software visualization]]
+title: Diehl - Software Visualization
+type: text/x-markdown
+
+* Interactive Exploration - allow the user to get an overview, then zoom and filter. Get details on demand
+* Focus + Context - Detailed viz of one part is augmented with coarse-grained info about related parts

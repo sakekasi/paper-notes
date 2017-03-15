@@ -1,0 +1,37 @@
+created: 20170309232920268
+modified: 20170309234246693
+tags: paper [[code layout]]
+title: Bragdon, Zeleznik, Reiss, et. al - Code Bubbles: A Working Set-based Interface for Code Understanding and Maintenance
+type: text/x-markdown
+
+* interesting paradigm for code layout. Lots of good tradeoffs IMO
+* "The file-based nature of contemporary IDEs makes it prohibitively difficult to create and maintain a simultaneous view of such fragments"
+* "programmers must manually and repeatedly perform numerous interactions to place, resize, scroll, and reflow a different file pane/window for each fragment"
+* Method Bubbles
+  - remove most of window chrome
+  - reflow the code to fit
+  - elide basic code blocks until the function fits within 40 lines **seems like this might be better addressed by making the lang less verbose**
+* Layout
+  - automatically space bubbles to avoid overlap 
+  - they detail their algo in the paper. worth reading, if we wanna adapt
+  - good blend of user control and automated layout
+  - users can search for bubbles within the code base (which is nice). **may also want to search within layouts, or see where in the tape something shows up**
+* Virtual screen
+  - ticker tape. 20x width, 1.5x height
+  - expands to make room if you overreach
+  - discrete rooms metaphor is interesting
+  - " We also rejected geometrically scaling bubbles both because that would provide only limited additional space and because in formative evaluations, several programmers commented that they foudn it hard to read code of different, particularly small, font sizes.
+"
+  - Might be worth it to do some kind of "aggressive collapsing", where you just show the method (maybe a spec too)
+* Bubbles can be grouped with a semi-xparent halo
+* Qualitative Evaluation
+  - concurrent code views, side by side working sets
+  - named sections of the panning bar
+  - file-style layout (for skimming an entire class, dumping parts bucket on the floor)
+  
+
+## Selected References
+
+1. Ko, Myers, Coblenz, Aung. An Exploratory Study of How Developers Seek, Relate, and Collect Relevant Information during Software Maintenance Tasks.
+2. Coblenz M et al. JASPER; an Exlipse plug-ni to facilitate software maintenance tasks.
+3. Robertson, Horowitz, Czerwinski. Scalable Fabric: flexible task management.
